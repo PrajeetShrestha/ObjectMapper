@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2539DDA71B469DB00059B6B6 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 2539DDA61B469DB00059B6B6 /* Animal.m */; };
 		25A1B1871B463E1B00D76B41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1861B463E1B00D76B41 /* main.m */; };
 		25A1B18A1B463E1B00D76B41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1891B463E1B00D76B41 /* AppDelegate.m */; };
 		25A1B18D1B463E1B00D76B41 /* Parser.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B18B1B463E1B00D76B41 /* Parser.xcdatamodeld */; };
@@ -15,6 +16,8 @@
 		25A1B1951B463E1B00D76B41 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25A1B1941B463E1B00D76B41 /* Images.xcassets */; };
 		25A1B1981B463E1B00D76B41 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25A1B1961B463E1B00D76B41 /* LaunchScreen.xib */; };
 		25A1B1A41B463E1B00D76B41 /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1A31B463E1B00D76B41 /* ParserTests.m */; };
+		25A1B1AF1B46407200D76B41 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1AE1B46407200D76B41 /* Person.m */; };
+		25A1B1B21B46756600D76B41 /* ObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1B11B46756600D76B41 /* ObjectMapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2539DDA51B469DB00059B6B6 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		2539DDA61B469DB00059B6B6 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		25A1B1811B463E1B00D76B41 /* Parser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A1B1851B463E1B00D76B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25A1B1861B463E1B00D76B41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +47,10 @@
 		25A1B19D1B463E1B00D76B41 /* ParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A1B1A21B463E1B00D76B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25A1B1A31B463E1B00D76B41 /* ParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ParserTests.m; sourceTree = "<group>"; };
+		25A1B1AD1B46407200D76B41 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		25A1B1AE1B46407200D76B41 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		25A1B1B01B46756600D76B41 /* ObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMapper.h; sourceTree = "<group>"; };
+		25A1B1B11B46756600D76B41 /* ObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMapper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +96,12 @@
 				25A1B1891B463E1B00D76B41 /* AppDelegate.m */,
 				25A1B18E1B463E1B00D76B41 /* ViewController.h */,
 				25A1B18F1B463E1B00D76B41 /* ViewController.m */,
+				25A1B1AD1B46407200D76B41 /* Person.h */,
+				25A1B1AE1B46407200D76B41 /* Person.m */,
+				2539DDA51B469DB00059B6B6 /* Animal.h */,
+				2539DDA61B469DB00059B6B6 /* Animal.m */,
+				25A1B1B01B46756600D76B41 /* ObjectMapper.h */,
+				25A1B1B11B46756600D76B41 /* ObjectMapper.m */,
 				25A1B1911B463E1B00D76B41 /* Main.storyboard */,
 				25A1B1941B463E1B00D76B41 /* Images.xcassets */,
 				25A1B1961B463E1B00D76B41 /* LaunchScreen.xib */,
@@ -224,6 +239,9 @@
 			files = (
 				25A1B18A1B463E1B00D76B41 /* AppDelegate.m in Sources */,
 				25A1B18D1B463E1B00D76B41 /* Parser.xcdatamodeld in Sources */,
+				25A1B1B21B46756600D76B41 /* ObjectMapper.m in Sources */,
+				25A1B1AF1B46407200D76B41 /* Person.m in Sources */,
+				2539DDA71B469DB00059B6B6 /* Animal.m in Sources */,
 				25A1B1901B463E1B00D76B41 /* ViewController.m in Sources */,
 				25A1B1871B463E1B00D76B41 /* main.m in Sources */,
 			);
@@ -422,6 +440,7 @@
 				25A1B1A91B463E1B00D76B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25A1B1AA1B463E1B00D76B41 /* Build configuration list for PBXNativeTarget "ParserTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +449,7 @@
 				25A1B1AC1B463E1B00D76B41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
