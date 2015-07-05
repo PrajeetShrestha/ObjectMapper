@@ -21,20 +21,13 @@
     [super viewDidLoad];
 
     NSDictionary *mapObject = @{
-                                @"name_test":@"Hari",
+                                @"name_":@"Hari",
                                 @"age":@14,
-                                @"dateOfBirth":@{
+                                @"date_of_birth":@{
                                         kOMDateFormatString:kOMTimestamp,//@"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
                                         kOMDateValue:@"12321321"//@"2015-05-02T03:22:54.139Z"
-                                        },
-                                @"abc":@"test"
+                                        }
                                 };
-    NSArray *keys = [mapObject allKeys];
-    for (NSString *key in keys){
-        NSString *keyWithOutUnderScore = [key stringByReplacingOccurrencesOfString:@"_"
-                                             withString:@""];
-        NSLog(@"%@",keyWithOutUnderScore);
-    }
     Person *person = [Person new];
     [person map:mapObject];
     NSDictionary *animalObject = @{@"name":@"Hippo",
@@ -44,7 +37,6 @@
     [animal map:animalObject];
     NSLog(@"Name: %@, Age: %@ DateOfBirth: %@",person.name,person.age,person.dateOfBirth);
     NSLog(@"Name: %@, NumberofLegs: %@",animal.name,animal.numberOfLegs);
-
 }
 
 - (void)didReceiveMemoryWarning {

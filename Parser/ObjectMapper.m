@@ -55,20 +55,27 @@
 - (void)map:(NSDictionary *)inputDictionary {
     NSDictionary *propertyAndTypes = [self types];
     NSArray *inputDictionaryKeys = [inputDictionary allKeys];
-    //NSArray *propertyAndTypesKeys = [propertyAndTypes allKeys];
+
+    NSMutableDictionary *trimmedDictionary = [NSMutableDictionary new];
     for (NSString *key in inputDictionaryKeys) {
+        NSString *trimmedKey = [self trimKey:key];
+        [trimmedDictionary setValue:inputDictionary[key] forKey:trimmedKey];
+    }
+    //NSArray *propertyAndTypesKeys = [propertyAndTypes allKeys];
+    for (NSString *key in [propertyAndTypes allKeys]) {
         NSString *type = propertyAndTypes[key];
+        NSString *trimmedDicKey = key.lowercaseString;
         if ([type isEqualToString:@"NSNumber"]) {
-            [self validateNSNumber:inputDictionary[key] andAssignToKey:key];
+            [self validateNSNumber:trimmedDictionary[trimmedDicKey] andAssignToKey:key];
         }
         if ([type isEqualToString:@"NSString"]) {
-            [self validateNSString:inputDictionary[key] andAssignToKey:key];
+            [self validateNSString:trimmedDictionary[trimmedDicKey] andAssignToKey:key];
         }
         if ([type isEqualToString:@"id"]) {
-            [self validateId:inputDictionary[key] andAssignToKey:key];
+            [self validateId:trimmedDictionary[trimmedDicKey] andAssignToKey:key];
         }
         if ([type isEqualToString:@"NSDate"]) {
-            [self validateNSDate:inputDictionary[key] andAssignToKey:key];
+            [self validateNSDate:trimmedDictionary[trimmedDicKey] andAssignToKey:key];
         }
     }
 }
@@ -124,6 +131,12 @@
     [dateFormatter setDateFormat:formatString];
     NSDate *dateObject  = [dateFormatter dateFromString:dateString];
     return dateObject;
+}
+
+- (NSString *)trimKey:(NSString *)string {
+    NSString *trimmedKey = [string
+                                     stringByReplacingOccurrencesOfString:@"_" withString:@""];
+    return trimmedKey.lowercaseString ;
 }
 
 @end

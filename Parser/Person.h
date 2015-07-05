@@ -13,7 +13,6 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSNumber *age;
 @property (nonatomic) NSDate *dateOfBirth;
-@property (nonatomic) int abc;
 
 
 @end
