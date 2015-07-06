@@ -13,6 +13,6 @@
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSNumber *age;
 @property (nonatomic) NSDate *dateOfBirth;
-
-
+@property (nonatomic) NSMutableArray *friends;
+@property (nonatomic) NSMutableArray *animals;
 @end

@@ -14,5 +14,13 @@
 #define kOMTimestamp @"Timestamp"
 
 @interface ObjectMapper : NSObject
+{
+    id obj;
+}
+
+@property (nonatomic) NSDictionary *innerMap;
+@property (nonatomic) NSDictionary *dateFormatters;
 - (void)map:(NSDictionary *)dictionary;
+
+
 @end

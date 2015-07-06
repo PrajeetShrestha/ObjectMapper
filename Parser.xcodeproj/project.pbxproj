@@ -18,6 +18,10 @@
 		25A1B1A41B463E1B00D76B41 /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1A31B463E1B00D76B41 /* ParserTests.m */; };
 		25A1B1AF1B46407200D76B41 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1AE1B46407200D76B41 /* Person.m */; };
 		25A1B1B21B46756600D76B41 /* ObjectMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A1B1B11B46756600D76B41 /* ObjectMapper.m */; };
+		25A2292F1B4A520100E1435A /* Flight.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A2292E1B4A520100E1435A /* Flight.m */; };
+		25A229321B4A530E00E1435A /* Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 25A229311B4A530E00E1435A /* Object.m */; };
+		25CDA3E01B490D4E00AAB5BC /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CDA3DF1B490D4E00AAB5BC /* Friend.m */; };
+		3B68C74B0C285BFCBD05BB17 /* libPods-Parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DEF7E05A789F92626CB452A2 /* libPods-Parser.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,15 @@
 		25A1B1AE1B46407200D76B41 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		25A1B1B01B46756600D76B41 /* ObjectMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectMapper.h; sourceTree = "<group>"; };
 		25A1B1B11B46756600D76B41 /* ObjectMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectMapper.m; sourceTree = "<group>"; };
+		25A2292D1B4A520100E1435A /* Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flight.h; sourceTree = "<group>"; };
+		25A2292E1B4A520100E1435A /* Flight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Flight.m; sourceTree = "<group>"; };
+		25A229301B4A530E00E1435A /* Object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Object.h; sourceTree = "<group>"; };
+		25A229311B4A530E00E1435A /* Object.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Object.m; sourceTree = "<group>"; };
+		25CDA3DE1B490D4E00AAB5BC /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		25CDA3DF1B490D4E00AAB5BC /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		57A87EAF6CD74C686210688D /* Pods-Parser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parser.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Parser/Pods-Parser.debug.xcconfig"; sourceTree = "<group>"; };
+		8AA6CA63E9091B79DA84E009 /* Pods-Parser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Parser.release.xcconfig"; path = "Pods/Target Support Files/Pods-Parser/Pods-Parser.release.xcconfig"; sourceTree = "<group>"; };
+		DEF7E05A789F92626CB452A2 /* libPods-Parser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Parser.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B68C74B0C285BFCBD05BB17 /* libPods-Parser.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +91,8 @@
 				25A1B1831B463E1B00D76B41 /* Parser */,
 				25A1B1A01B463E1B00D76B41 /* ParserTests */,
 				25A1B1821B463E1B00D76B41 /* Products */,
+				3F64257DFB76202010A60100 /* Pods */,
+				FE3789A08DFAB4DEDD460ED7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,8 +112,14 @@
 				25A1B1891B463E1B00D76B41 /* AppDelegate.m */,
 				25A1B18E1B463E1B00D76B41 /* ViewController.h */,
 				25A1B18F1B463E1B00D76B41 /* ViewController.m */,
+				25A229301B4A530E00E1435A /* Object.h */,
+				25A229311B4A530E00E1435A /* Object.m */,
+				25A2292D1B4A520100E1435A /* Flight.h */,
+				25A2292E1B4A520100E1435A /* Flight.m */,
 				25A1B1AD1B46407200D76B41 /* Person.h */,
 				25A1B1AE1B46407200D76B41 /* Person.m */,
+				25CDA3DE1B490D4E00AAB5BC /* Friend.h */,
+				25CDA3DF1B490D4E00AAB5BC /* Friend.m */,
 				2539DDA51B469DB00059B6B6 /* Animal.h */,
 				2539DDA61B469DB00059B6B6 /* Animal.m */,
 				25A1B1B01B46756600D76B41 /* ObjectMapper.h */,
@@ -137,6 +159,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3F64257DFB76202010A60100 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57A87EAF6CD74C686210688D /* Pods-Parser.debug.xcconfig */,
+				8AA6CA63E9091B79DA84E009 /* Pods-Parser.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE3789A08DFAB4DEDD460ED7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DEF7E05A789F92626CB452A2 /* libPods-Parser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +183,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25A1B1A71B463E1B00D76B41 /* Build configuration list for PBXNativeTarget "Parser" */;
 			buildPhases = (
+				170E0EEC5B3B7AA067051939 /* Check Pods Manifest.lock */,
 				25A1B17D1B463E1B00D76B41 /* Sources */,
 				25A1B17E1B463E1B00D76B41 /* Frameworks */,
 				25A1B17F1B463E1B00D76B41 /* Resources */,
+				ECCE2CADB6B6FDD38E59EC65 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +273,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		170E0EEC5B3B7AA067051939 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ECCE2CADB6B6FDD38E59EC65 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Parser/Pods-Parser-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		25A1B17D1B463E1B00D76B41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -244,6 +318,9 @@
 				2539DDA71B469DB00059B6B6 /* Animal.m in Sources */,
 				25A1B1901B463E1B00D76B41 /* ViewController.m in Sources */,
 				25A1B1871B463E1B00D76B41 /* main.m in Sources */,
+				25CDA3E01B490D4E00AAB5BC /* Friend.m in Sources */,
+				25A229321B4A530E00E1435A /* Object.m in Sources */,
+				25A2292F1B4A520100E1435A /* Flight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +446,7 @@
 		};
 		25A1B1A81B463E1B00D76B41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57A87EAF6CD74C686210688D /* Pods-Parser.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Parser/Info.plist;
@@ -379,6 +457,7 @@
 		};
 		25A1B1A91B463E1B00D76B41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AA6CA63E9091B79DA84E009 /* Pods-Parser.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Parser/Info.plist;
