@@ -7,12 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-
-
-
 @interface Flight : NSObject
-
 @property (nonatomic, retain) NSString * airline_logo;
 @property (nonatomic, retain) NSString * airline_name;
 @property (nonatomic, retain) NSString * arrival_airport_city_code;

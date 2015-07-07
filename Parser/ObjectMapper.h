@@ -12,6 +12,7 @@
 #define kOMDateFormatString @"FormatString"
 #define kOMDateValue @"DateValue"
 #define kOMTimestamp @"Timestamp"
+#define kOMZuluformatter @"ZuluFormatter"
 
 @interface ObjectMapper : NSObject
 {
@@ -20,6 +21,7 @@
 
 @property (nonatomic) NSDictionary *innerMap;
 @property (nonatomic) NSDictionary *dateFormatters;
+- (void)manualMapping:(NSDictionary *)dictionary;
 - (void)map:(NSDictionary *)dictionary;
 
 

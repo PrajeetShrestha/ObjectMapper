@@ -58,10 +58,10 @@
 
     NSMutableDictionary *trimmedDictionary = [NSMutableDictionary new];
     for (NSString *key in inputDictionaryKeys) {
-        NSString *trimmedKey = key;//[self trimKey:key];
+        NSString *trimmedKey = [self trimKey:key];
         [trimmedDictionary setValue:inputDictionary[key] forKey:trimmedKey];
     }
-    //NSArray *propertyAndTypesKeys = [propertyAndTypes allKeys];
+
     for (NSString *key in [propertyAndTypes allKeys]) {
         NSLog(@"%@",key);
         NSString *type = propertyAndTypes[key];
@@ -100,13 +100,42 @@
     }
 }
 
+- (void)manualMapping:(NSDictionary *)inputDictionary {
+    NSDictionary *propertyAndTypes = [self types];
+    NSArray *inputDictionaryKeys = [inputDictionary allKeys];
+
+    NSMutableDictionary *trimmedDictionary = [NSMutableDictionary new];
+    for (NSString *key in inputDictionaryKeys) {
+        NSString *trimmedKey = [self trimKey:key];
+        [trimmedDictionary setValue:inputDictionary[key] forKey:trimmedKey];
+    }
+    //NSArray *propertyAndTypesKeys = [propertyAndTypes allKeys];
+    for (NSString *key in [propertyAndTypes allKeys]) {
+        NSString *type = propertyAndTypes[key];
+        NSString *trimmedDicKey = key.lowercaseString;
+        if ([type isEqualToString:@"NSNumber"]) {
+            [self validateNSNumber:trimmedDictionary[trimmedDicKey] andAssignToKey:key forObject:self];
+        }
+        if ([type isEqualToString:@"NSString"]) {
+            [self validateNSString:trimmedDictionary[trimmedDicKey] andAssignToKey:key forObject:self];
+        }
+        if ([type isEqualToString:@"id"]) {
+            [self validateId:trimmedDictionary[trimmedDicKey] andAssignToKey:key forObject:self];
+        }
+        if ([type isEqualToString:@"NSDate"]) {
+            [self validateNSDate:trimmedDictionary[trimmedDicKey] andAssignToKey:key forObject:self];
+        }
+    }
+
+}
+
 - (void)mapInnerArray:(NSDictionary *)inputDictionary withPropertyAndTypes:(NSDictionary *)propertyAndTypes forObject:obj1 {
 
     NSArray *inputDictionaryKeys = [inputDictionary allKeys];
 
     NSMutableDictionary *trimmedDictionary = [NSMutableDictionary new];
     for (NSString *key in inputDictionaryKeys) {
-        NSString *trimmedKey = key;//[self trimKey:key];
+        NSString *trimmedKey = [self trimKey:key];
         [trimmedDictionary setValue:inputDictionary[key] forKey:trimmedKey];
     }
     //NSArray *propertyAndTypesKeys = [propertyAndTypes allKeys];
@@ -156,13 +185,24 @@
 
 - (void)validateNSDate:(id)value andAssignToKey:(NSString *)key forObject:(id)object {
     NSString *formatString;
-    for (NSString *formatterKey in self.dateFormatters){
-        if ([formatterKey isEqualToString:key]) {
-            formatString = self.dateFormatters[formatterKey];
+    NSString *dateValue;
+    //Value will be dictionary if manual mapping is done
+    if ([value isKindOfClass:[NSDictionary class]]) {
+        NSDictionary *dateDic = value;
+        formatString = dateDic[kOMDateFormatString];
+        dateValue = dateDic[kOMDateValue];
+    } else {
+        for (NSString *formatterKey in self.dateFormatters){
+            if ([formatterKey isEqualToString:key]) {
+                formatString = self.dateFormatters[formatterKey];
+            } else if([formatterKey isEqualToString:kOMZuluformatter]) {
+                //Zulu formatter will be default formatter string
+                formatString = self.dateFormatters[formatterKey];
+            }
+            dateValue = value;
         }
     }
     if (formatString) {
-        NSString *dateValue = value;
         if ([formatString isKindOfClass:[NSString class]] && [dateValue isKindOfClass:[NSString class]]) {
             NSDate *date;
             if ([formatString isEqualToString:kOMTimestamp]) {
